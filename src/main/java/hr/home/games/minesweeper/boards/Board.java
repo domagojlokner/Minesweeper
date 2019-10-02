@@ -2,13 +2,13 @@ package hr.home.games.minesweeper.boards;
 
 import java.util.Random;
 
-public class MinefieldBoard {
+public class Board {
     private int width;
     private int height;
     private int numOfMines;
     private int field[][];
 
-    public MinefieldBoard(int width, int height, int numOfMines) {
+    public Board(int width, int height, int numOfMines) {
         this.height = height;
         this.width = width;
 
@@ -53,8 +53,8 @@ public class MinefieldBoard {
         int yMin = Math.max(i - 1, 0);
         int xMin = Math.max(j - 1, 0);
 
-        int yMax = i+1 > height-1 ? height-1 : i+1;
-        int xMax = j+1 > width-1 ? width-1 : j+1;
+        int yMax = Math.min(i + 1, height - 1);
+        int xMax = Math.min(j + 1, width - 1);
 
         for (int n = yMin; n <= yMax; ++n) {
             for (int m = xMin; m <= xMax; ++m) {

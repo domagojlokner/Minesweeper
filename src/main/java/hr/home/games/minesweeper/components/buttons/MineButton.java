@@ -1,7 +1,10 @@
 package hr.home.games.minesweeper.components.buttons;
 
 public class MineButton extends MinefieldButtonModel {
-    private boolean revealed = false;
+
+    public MineButton(int row, int col) {
+        super(row, col);
+    }
 
     @Override
     public void accept(MinefieldButtonVisitor v) {
@@ -11,7 +14,7 @@ public class MineButton extends MinefieldButtonModel {
     @Override
     protected void leftClickAction() {
         super.leftClickAction();
-        if (isSelected() && !revealed) {
+        if (isSelected()) {
             setIcons(icons.getActivatedMineIcon(getIconSize()));
             fireMineActivated();
         }
@@ -19,15 +22,14 @@ public class MineButton extends MinefieldButtonModel {
 
     @Override
     public void reveal() {
-        setSelected(true);
-        setEnabled(false);
-        revealed = true;
-        setIcons(icons.getMineIcon(getIconSize()));
+        super.reveal();
+        if (isSelected()) {
+            setIcons(icons.getMineIcon(getIconSize()));
+        }
     }
 
     @Override
     public void restore() {
         super.restore();
-        revealed = false;
     }
 }

@@ -10,7 +10,8 @@ public class NumberButton extends MinefieldButtonModel{
 
     private static Map<Integer, Color> colorMap = new HashMap<>();
 
-    public NumberButton(int number) {
+    public NumberButton(int number, int row, int col) {
+        super(row, col);
         this.number = number;
         initMap();
     }
@@ -34,8 +35,8 @@ public class NumberButton extends MinefieldButtonModel{
     }
 
     @Override
-    protected void leftClickAction() {
-        super.leftClickAction();
+    public void reveal() {
+        super.reveal();
         if (isSelected()) {
             setFont(new Font("Arial", Font.BOLD, getSize().height - GAP));
             setBackground(colorMap.get(number));

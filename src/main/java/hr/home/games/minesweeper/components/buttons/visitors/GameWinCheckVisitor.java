@@ -12,6 +12,10 @@ public class GameWinCheckVisitor implements MinefieldButtonVisitor {
         return win;
     }
 
+    public void reset() {
+        win =  true;
+    }
+
     @Override
     public void visit(MineButton b) {
         win = win && b.isMarked();
@@ -19,11 +23,11 @@ public class GameWinCheckVisitor implements MinefieldButtonVisitor {
 
     @Override
     public void visit(NumberButton b) {
-        win = win && !b.isMarked();
+        win = win && b.isSelected() && !b.isMarked();
     }
 
     @Override
     public void visit(EmptyButton b) {
-        win = win && !b.isMarked();
+        win = win && b.isSelected() && !b.isMarked();
     }
 }
