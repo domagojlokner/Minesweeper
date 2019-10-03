@@ -41,9 +41,9 @@ public class Board {
             int x = rand.nextInt(width);
             int y = rand.nextInt(height);
 
-            if (field[x][y] != -1) {
-                field[x][y] = -1;
-                incrementAroundField(x, y);
+            if (field[y][x] != -1) {
+                field[y][x] = -1;
+                incrementAroundField(y, x);
                 minesSet++;
             }
         }

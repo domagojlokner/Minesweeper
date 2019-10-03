@@ -7,7 +7,6 @@ import hr.home.games.minesweeper.components.buttons.GameButton;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,7 +17,9 @@ public class MinesweeperComponent extends JComponent {
 
     private JLabel minesLeft = new JLabel();
     private TimerLabel timer = new TimerLabel();
-    public GameButton button = new GameButton();
+    private GameButton button = new GameButton();
+
+    private JPanel gameInfoPanel = new JPanel();
 
     private List<GameListener> gameListeners = new LinkedList<>();
 
@@ -45,34 +46,72 @@ public class MinesweeperComponent extends JComponent {
     }
 
     private void initComponent(int width, int height, int numOfMines) {
+        this.setLayout(new BorderLayout());
+
         this.minefield = new MinefieldComponent(width, height, numOfMines);
         this.numberOfMines = this.numOfUnmarkedMines= numOfMines;
 
         this.minefield.addGameListener(minefieldBoardListener);
+
+        constructGameInfoPanel();
+
         styleLabel(minesLeft);
         styleLabel(timer);
+        setAllComponents();
 
-        addComponents();
+        button.addActionListener(e -> {
+            restart();
+        });
+
+        resetGameInfoPanel();
+        startGameInfoPanel();
+    }
+
+    private JPanel constructGameInfoPanel() {
+        gameInfoPanel.setLayout(new GridLayout(1, 0));
+        minesLeft.setHorizontalAlignment(SwingConstants.CENTER);
+        timer.setHorizontalAlignment(SwingConstants.CENTER);
+        gameInfoPanel.add(minesLeft);
+        gameInfoPanel.add(button);
+        gameInfoPanel.add(timer);
+        return gameInfoPanel;
+    }
+
+    private void setAllComponents() {
+        add(gameInfoPanel, BorderLayout.NORTH);
+        add(minefield, BorderLayout.CENTER);
+    }
+
+    private void startGameInfoPanel() {
         timer.startTimer();
         minesLeft.setText(Integer.toString(numOfUnmarkedMines));
     }
 
-    private void addComponents() {
-        JPanel label = new JPanel(new GridLayout(1, 0));
-        label.add(minesLeft);
-        label.add(button);
-        timer.setHorizontalAlignment(SwingConstants.RIGHT);
-        label.add(timer);
+    private void resetGameInfoPanel() {
+        timer.stopTimer();
+        timer.restartTimer();
+        numOfUnmarkedMines = numberOfMines;
+        minesLeft.setText(Integer.toString(numberOfMines));
+    }
 
-        setLayout(new BorderLayout());
-
-        add(label, BorderLayout.NORTH);
-        add(minefield, BorderLayout.CENTER);
+    private void restart() {
+        minefield.removeGameListener(minefieldBoardListener);
+        minefield = new MinefieldComponent(
+                minefield.getNumberOfRows(),
+                minefield.getNumberOfColumns(),
+                numberOfMines
+        );
+        minefield.addGameListener(minefieldBoardListener);
+        button.setButtonIcon();
+        this.removeAll();
+        setAllComponents();
+        resetGameInfoPanel();
+        startGameInfoPanel();
     }
 
     private void styleLabel(JLabel label) {
         label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
-        label.setFont(new Font("TimesRoman", Font.BOLD, 35));
+        label.setFont(new Font("TimesRoman", Font.BOLD, 40));
     }
 
     private MinefieldBoardListener minefieldBoardListener = new MinefieldBoardListener() {
@@ -80,12 +119,14 @@ public class MinesweeperComponent extends JComponent {
         public void gameOver() {
             timer.stopTimer();
             button.setGameOverIcon();
+            fireGameOver();
         }
 
         @Override
         public void win() {
             timer.stopTimer();
             button.setWinIcon();
+            fireWin();
         }
 
         @Override
@@ -119,11 +160,11 @@ public class MinesweeperComponent extends JComponent {
         }
     }
 
-    public void addButtonActionListener(ActionListener l) {
-        button.addActionListener(l);
+    public int numberOfRows() {
+        return this.minefield.getNumberOfRows();
     }
 
-    public void removeButtonActionListener(ActionListener l) {
-        button.removeActionListener(l);
+    public int numberOfColumns() {
+        return this.minefield.getNumberOfColumns();
     }
 }

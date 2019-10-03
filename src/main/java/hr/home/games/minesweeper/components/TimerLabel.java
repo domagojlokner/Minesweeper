@@ -20,8 +20,13 @@ public class TimerLabel extends JLabel {
         timer.stop();
     }
 
-    public void restartTimer() {
+    public void continueTimer() {
         timer.restart();
+    }
+
+    public void restartTimer() {
+        setText("0");
+        currentValue = 0;
     }
 
     public int getCurrentTime() {

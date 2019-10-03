@@ -160,4 +160,12 @@ public class MinefieldComponent extends JPanel {
         }
     }
 
+    public int getNumberOfRows() {
+       return board.getHeight();
+    }
+
+    public int getNumberOfColumns() {
+        return board.getHeight();
+    }
+
 }

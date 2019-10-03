@@ -1,46 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00c28df9-d6cb-411e-8b69-bc4f001191d4" name="Default Changelist" comment="minesweeper component finished.&#10;Button for restarting game not working.">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/GameListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/MinesweeperComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinefieldComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/TimerLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/GameButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/home/games/minesweeper/components/icons/button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/home/games/minesweeper/components/icons/button_gameover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/home/games/minesweeper/components/icons/button_win.png" afterDir="false" />
+    <list default="true" id="00c28df9-d6cb-411e-8b69-bc4f001191d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/Minesweeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/GameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinefieldBoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinefieldBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinesweeperButtonsBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/ButtonsBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinesweeperComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/Icons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/Icons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/EmptyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/EmptyButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/MineButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/MineButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/MinefieldButtonGroup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/NumberButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/NumberButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/visitors/GameWinCheckVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/visitors/GameWinCheckVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/visitors/RevealUnmarkedMineVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/visitors/RevealUnmarkedMinesVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/minesweeper.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/MinesweeperComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/MinesweeperComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinefieldComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/boards/MinefieldComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/TimerLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/TimerLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/home/games/minesweeper/components/buttons/GameButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/Minesweeper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/Minesweeper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/boards/GameListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/boards/MinefieldBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/boards/MinesweeperButtonsBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/boards/MinesweeperComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/Icons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/Icons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/EmptyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/EmptyButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MineButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MineButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/MinefieldButtonModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/NumberButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/NumberButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/visitors/GameWinCheckVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/visitors/GameWinCheckVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/home/games/minesweeper/components/buttons/visitors/RevealUnmarkedMineVisitor.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,8 +118,17 @@
       <workItem from="1569514628150" duration="9031000" />
       <workItem from="1569784064825" duration="6222000" />
       <workItem from="1570034203065" duration="5519000" />
-      <workItem from="1570046806362" duration="2387000" />
+      <workItem from="1570046806362" duration="3561000" />
+      <workItem from="1570123715597" duration="4512000" />
     </task>
+    <task id="LOCAL-00001" summary="minesweeper component finished.&#10;Button for restarting game not working.">
+      <created>1570049215277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570049215277</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
