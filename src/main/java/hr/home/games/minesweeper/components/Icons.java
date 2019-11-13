@@ -11,14 +11,26 @@ public class Icons {
     public static final String mineIconPath = "icons/mine.png";
     public static final String activatedMinePath = "icons/activated_mine.png";
 
+    public static final String buttonIconPath = "icons/button.png";
+    public static final String buttonIconWinPath = "icons/button_win.png";
+    public static final String buttonIconGameOverPath = "icons/button_gameover.png";
+
     private ImageIcon flagIcon;
     private ImageIcon mineIcon;
     private ImageIcon activatedMineIcon;
+
+    private ImageIcon buttonIcon;
+    private ImageIcon buttonIconWin;
+    private ImageIcon buttonIconGameOver;
 
     public Icons() {
         this.flagIcon = loadFlagIcon();
         this.mineIcon = loadMineIcon();
         this.activatedMineIcon = loadActivatedMineIcon();
+
+        this.buttonIcon = loadButtonIcon();
+        this.buttonIconGameOver = loadButtonIconGameOver();
+        this.buttonIconWin = loadButtonIconWin();
     }
 
 
@@ -34,6 +46,19 @@ public class Icons {
         return activatedMineIcon;
     }
 
+    public ImageIcon getButtonIcon() {
+        return buttonIcon;
+    }
+
+    public ImageIcon getButtonIconWin() {
+        return buttonIconWin;
+    }
+
+    public ImageIcon getButtonIconGameOver() {
+        return buttonIconGameOver;
+    }
+
+
     public ImageIcon getFlagIcon(Dimension d) {
         return scaleIcon(flagIcon, d);
     }
@@ -46,6 +71,19 @@ public class Icons {
         return scaleIcon(activatedMineIcon, d);
     }
 
+    public ImageIcon getButtonIcon(Dimension d) {
+        return scaleIcon(buttonIcon, d);
+    }
+
+    public ImageIcon getButtonIconWin(Dimension d) {
+        return scaleIcon(buttonIconWin, d);
+    }
+
+    public ImageIcon getButtonIconGameOver(Dimension d) {
+        return scaleIcon(buttonIconGameOver, d);
+    }
+
+
     private ImageIcon loadFlagIcon() {
         return loadIcon(flagIconPath);
     }
@@ -57,6 +95,19 @@ public class Icons {
     private ImageIcon loadActivatedMineIcon() {
         return loadIcon(activatedMinePath);
     }
+
+    private ImageIcon loadButtonIcon() {
+        return loadIcon(buttonIconPath);
+    }
+
+    private ImageIcon loadButtonIconWin() {
+        return loadIcon(buttonIconWinPath);
+    }
+
+    private ImageIcon loadButtonIconGameOver() {
+        return loadIcon(buttonIconGameOverPath);
+    }
+
 
     private ImageIcon loadIcon(String path) {
         byte[] bytesIcon;

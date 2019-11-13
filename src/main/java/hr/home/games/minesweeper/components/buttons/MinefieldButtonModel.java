@@ -14,9 +14,15 @@ public abstract class MinefieldButtonModel extends JToggleButton {
     protected Icons icons;
     private int ICON_GAP = 15;
 
+    public int row;
+    public int col;
+
     private List<MinefieldButtonListener> listeners = new LinkedList<>();
 
-    public MinefieldButtonModel() {
+    public MinefieldButtonModel(int row, int col) {
+        this.row = row;
+        this.col = col;
+
         this.icons = new Icons();
 
         addMouseListener(rightClickActionListener);
@@ -41,6 +47,7 @@ public abstract class MinefieldButtonModel extends JToggleButton {
         public void mouseClicked(MouseEvent e) {
             if (e.getButton() != MouseEvent.BUTTON3) {
                 MinefieldButtonModel.this.leftClickAction();
+
             }
         }
     };
@@ -54,18 +61,19 @@ public abstract class MinefieldButtonModel extends JToggleButton {
     }
 
     protected void leftClickAction() {
-        if(!flag) {
-            setSelected(true);
-            setEnabled(false);
+        reveal();
+        if (isSelected()) {
             fireSelected();
-        } else {
-            setSelected(false);
         }
     }
 
     public void reveal() {
-        flag = false;
-        leftClickAction();
+        if (!flag) {
+            setSelected(true);
+            setEnabled(false);
+        } else {
+            setSelected(false);
+        }
     }
 
     public void restore() {
